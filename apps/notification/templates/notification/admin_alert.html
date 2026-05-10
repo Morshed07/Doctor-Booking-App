@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TeleHealth - Admin Appointment Notification</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f0f4f8;font-family:'Georgia',serif;">
+ 
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0f4f8;padding:32px 0;">
+<tr>
+<td align="center">
+<table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;max-width:600px;width:100%;">
+ 
+          <!-- Header -->
+<tr>
+<td style="background-color:#C9A87C;padding:28px 40px;text-align:center;">
+<h1 style="margin:0;font-size:28px;font-weight:400;color:#1B3252;letter-spacing:1px;">TeleHealth</h1>
+<p style="margin:4px 0 0;font-size:12px;color:#1B3252;letter-spacing:0.5px;">Telehealth Admin Panel</p>
+<div style="display:inline-block;background-color:#1B3252;color:#C9A87C;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:3px 14px;border-radius:4px;margin-top:10px;font-family:Arial,sans-serif;">ADMIN NOTIFICATION</div>
+</td>
+</tr>
+
+          <!-- Body -->
+<tr>
+<td style="padding:28px 36px;background-color:#f7f9fc;">
+ 
+              <!-- Status Row -->
+<p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;font-family:Arial,sans-serif;">New Appointment Received</p>
+<table cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
+<tr>
+<td style="padding-right:8px;">
+<span style="display:inline-block;background-color:#FEF3C7;color:#92400E;font-size:11px;font-family:Arial,sans-serif;font-weight:500;padding:4px 10px;border-radius:20px;">&#9679; Awaiting Payment</span>
+</td>
+<td style="padding-right:8px;">
+<span style="display:inline-block;background-color:#DBEAFE;color:#1E40AF;font-size:11px;font-family:Arial,sans-serif;font-weight:500;padding:4px 10px;border-radius:20px;">&#9679; Telehealth</span>
+</td>
+<td>
+<span style="display:inline-block;background-color:#EFF6FF;color:#1E40AF;font-size:11px;font-family:Arial,sans-serif;padding:4px 10px;border-radius:20px;">ID: <strong>{{appointment_id}}</strong></span>
+</td>
+</tr>
+</table>
+ 
+              <!-- Patient Info -->
+<div style="background-color:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;margin-bottom:16px;">
+<p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;font-family:Arial,sans-serif;">Patient Info</p>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="50%" style="padding-bottom:12px;vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Full Name</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{first_name}} {{last_name}}</p>
+</td>
+<td width="50%" style="padding-bottom:12px;vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Email</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#3B82F6;font-family:Arial,sans-serif;">{{patient_email}}</p>
+</td>
+</tr>
+<tr>
+<td width="50%" style="vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Phone</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{patient_phone}}</p>
+</td>
+<td width="50%" style="vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Date of Birth</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{dob}}</p>
+</td>
+</tr>
+</table>
+</div>
+ 
+              <!-- Appointment Details -->
+<div style="background-color:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;margin-bottom:16px;">
+<p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;font-family:Arial,sans-serif;">Appointment Details</p>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="50%" style="padding-bottom:12px;vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Date &amp; Time</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{date}} at {{time}}</p>
+</td>
+<td width="50%" style="padding-bottom:12px;vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Duration</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">15 minutes</p>
+</td>
+</tr>
+<tr>
+<td width="50%" style="padding-bottom:12px;vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Service Category</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{service_name}}</p>
+</td>
+<td width="50%" style="padding-bottom:12px;vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Consultation Type</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{consultation_type}}</p>
+</td>
+</tr>
+<tr>
+{% comment %} <td width="50%" style="vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Assigned Provider</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{provider_name}}</p>
+</td> {% endcomment %}
+<td width="50%" style="vertical-align:top;">
+<p style="margin:0;font-size:11px;color:#999;font-family:Arial,sans-serif;">Booking Source</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">{{booking_source}}</p>
+</td>
+</tr>
+</table>
+</div>
+ 
+              <!-- Payment Summary -->
+<div style="background-color:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;margin-bottom:16px;">
+<p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;font-family:Arial,sans-serif;">Payment Summary</p>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td style="padding:8px 0;font-size:13px;color:#555;font-family:Arial,sans-serif;border-bottom:1px solid #f0f0f0;">Consultation Fee</td>
+<td style="padding:8px 0;font-size:13px;color:#1B3252;font-family:Arial,sans-serif;text-align:right;border-bottom:1px solid #f0f0f0;">{{fee}}</td>
+</tr>
+<tr>
+<td style="padding:8px 0;font-size:13px;color:#555;font-family:Arial,sans-serif;border-bottom:1px solid #f0f0f0;">Payment Method</td>
+<td style="padding:8px 0;font-size:13px;color:#1B3252;font-family:Arial,sans-serif;text-align:right;border-bottom:1px solid #f0f0f0;">{{payment_method}}</td>
+</tr>
+<tr>
+<td style="padding:8px 0;font-size:13px;color:#555;font-family:Arial,sans-serif;border-bottom:1px solid #f0f0f0;">Payment Status</td>
+<td style="padding:8px 0;text-align:right;border-bottom:1px solid #f0f0f0;">
+<span style="display:inline-block;background-color:#FEF3C7;color:#92400E;font-size:11px;font-family:Arial,sans-serif;font-weight:500;padding:3px 10px;border-radius:20px;">Pending</span>
+</td>
+</tr>
+<tr>
+<td style="padding:8px 0;font-size:13px;color:#555;font-family:Arial,sans-serif;border-bottom:1px solid #f0f0f0;">Transaction Ref</td>
+<td style="padding:8px 0;text-align:right;border-bottom:1px solid #f0f0f0;">
+<span style="display:inline-block;background-color:#EFF6FF;color:#1E40AF;font-size:11px;font-family:monospace;padding:2px 8px;border-radius:4px;">{{transaction_ref}}</span>
+</td>
+</tr>
+<tr>
+<td style="padding:10px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;">Total Due</td>
+<td style="padding:10px 0 0;font-size:14px;font-weight:700;color:#1B3252;font-family:Arial,sans-serif;text-align:right;">{{fee}}</td>
+</tr>
+</table>
+</div>
+ 
+              <!-- Activity Log -->
+<div style="background-color:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:20px 22px;margin-bottom:16px;">
+<p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;font-family:Arial,sans-serif;">Activity Log</p>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td style="padding:7px 0;font-size:12px;color:#555;font-family:Arial,sans-serif;border-bottom:1px solid #f0f0f0;">&#128197; Appointment created</td>
+<td style="padding:7px 0;font-size:11px;color:#aaa;font-family:Arial,sans-serif;text-align:right;border-bottom:1px solid #f0f0f0;">{{created_at}}</td>
+</tr>
+<tr>
+<td style="padding:7px 0;font-size:12px;color:#555;font-family:Arial,sans-serif;border-bottom:1px solid #f0f0f0;">&#9993; Confirmation email sent to patient</td>
+<td style="padding:7px 0;font-size:11px;color:#aaa;font-family:Arial,sans-serif;text-align:right;border-bottom:1px solid #f0f0f0;">{{email_sent_at}}</td>
+</tr>
+<tr>
+<td style="padding:7px 0;font-size:12px;color:#555;font-family:Arial,sans-serif;">&#9679; Awaiting payment confirmation</td>
+<td style="padding:7px 0;font-size:11px;color:#aaa;font-family:Arial,sans-serif;text-align:right;">—</td>
+</tr>
+</table>
+</div>
+ 
+              <!-- Admin Actions -->
+<!-- <div style="background-color:#F5EFE6;border-radius:12px;padding:20px 22px;margin-bottom:20px;">
+<p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;font-family:Arial,sans-serif;">Admin Actions</p>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right:8px;padding-bottom:8px;">
+<a href="{{confirm_payment_url}}" style="display:inline-block;background-color:#1B3252;color:#ffffff;font-size:12px;font-family:Arial,sans-serif;font-weight:700;padding:8px 16px;border-radius:6px;text-decoration:none;">&#10003; Confirm Payment</a>
+</td>
+<td style="padding-right:8px;padding-bottom:8px;">
+<a href="{{reschedule_url}}" style="display:inline-block;background-color:#ffffff;color:#1B3252;font-size:12px;font-family:Arial,sans-serif;font-weight:700;padding:8px 16px;border-radius:6px;text-decoration:none;border:1px solid #d1d5db;">&#128197; Reschedule</a>
+</td>
+<td style="padding-right:8px;padding-bottom:8px;">
+<a href="{{resend_email_url}}" style="display:inline-block;background-color:#ffffff;color:#1B3252;font-size:12px;font-family:Arial,sans-serif;font-weight:700;padding:8px 16px;border-radius:6px;text-decoration:none;border:1px solid #d1d5db;">&#9993; Resend Patient Email</a>
+</td>
+<td style="padding-bottom:8px;">
+<a href="{{cancel_url}}" style="display:inline-block;background-color:#ffffff;color:#b91c1c;font-size:12px;font-family:Arial,sans-serif;font-weight:700;padding:8px 16px;border-radius:6px;text-decoration:none;border:1px solid #fca5a5;">&#10005; Cancel Appointment</a>
+</td>
+</tr>
+</table>
+<p style="margin:10px 0 0;font-size:12px;color:#888;font-family:Arial,sans-serif;font-style:italic;">Actions are reflected in the dashboard in real time. Cancellations trigger an automatic patient notification.</p>
+</div> -->
+ 
+              <!-- Footer note -->
+<p style="margin:0;font-size:12px;color:#999;font-family:Arial,sans-serif;text-align:center;">This is an internal admin notification. Please do not forward this email.</p>
+ 
+            </td>
+</tr>
+ 
+          <!-- Footer -->
+<tr>
+<td style="background-color:#e8edf5;padding:16px 40px;text-align:center;">
+<p style="margin:0;font-size:12px;color:#999;font-family:Arial,sans-serif;">&copy; 2025 TeleHealth LLC &nbsp;&middot;&nbsp; Internal Admin Notification &nbsp;&middot;&nbsp; Do not forward</p>
+</td>
+</tr>
+ 
+        </table>
+</td>
+</tr>
+</table>
+ 
+</body>
+</html>

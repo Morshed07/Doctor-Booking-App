@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TeleHealth - Appointment Confirmation</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f0f4f8;font-family:'Georgia',serif;">
+ 
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0f4f8;padding:32px 0;">
+<tr>
+<td align="center">
+<table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;max-width:600px;width:100%;">
+ 
+          <!-- Header -->
+<tr>
+<td style="background-color:#C9A87C;padding:32px 40px;text-align:center;">
+<h1 style="margin:0;font-size:32px;font-weight:400;color:#1B3252;letter-spacing:1px;">TeleHealth</h1>
+<p style="margin:6px 0 0;font-size:13px;color:#1B3252;letter-spacing:0.5px;">Your Telehealth Consultation Awaits</p>
+</td>
+</tr>
+ 
+          <!-- Body -->
+<tr>
+<td style="padding:36px 40px;background-color:#f7f9fc;">
+ 
+              <!-- Greeting -->
+<h2 style="margin:0 0 12px;font-size:28px;font-weight:400;color:#1B3252;">Hello {{first_name}},</h2>
+<p style="margin:0 0 28px;font-size:14px;color:#555;line-height:1.7;">
+                Your telehealth consultation has been successfully scheduled. We're excited to help you on your wellness journey.
+</p>
+ 
+              <!-- Appointment Details -->
+<div style="background-color:#F5EFE6;border-radius:12px;padding:24px 28px;margin-bottom:24px;">
+<h3 style="margin:0 0 20px;font-size:16px;font-weight:700;color:#1B3252;">Appointment Details</h3>
+ 
+                <!-- Date & Time -->
+<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:16px;">
+<tr>
+<td width="32" valign="top">
+<div style="width:28px;height:28px;background-color:#e8ddd0;border-radius:6px;text-align:center;line-height:28px;font-size:14px;">📅</div>
+</td>
+<td style="padding-left:12px;">
+<p style="margin:0;font-size:12px;color:#999;">Date & Time</p>
+<p style="margin:2px 0 0;font-size:14px;font-weight:700;color:#1B3252;">{{date}} at {{time}}</p>
+</td>
+</tr>
+</table>
+ 
+                <!-- Service Category -->
+<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:16px;">
+<tr>
+<td width="32" valign="top">
+<div style="width:28px;height:28px;background-color:#e8ddd0;border-radius:6px;text-align:center;line-height:28px;font-size:14px;">⚡</div>
+</td>
+<td style="padding-left:12px;">
+<p style="margin:0;font-size:12px;color:#999;">Service Category</p>
+<p style="margin:2px 0 0;font-size:14px;font-weight:700;color:#1B3252;">{{service_name}}</p>
+</td>
+</tr>
+</table>
+ 
+                <!-- Consultation Type -->
+<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:16px;">
+<tr>
+<td width="32" valign="top">
+<div style="width:28px;height:28px;background-color:#e8ddd0;border-radius:6px;text-align:center;line-height:28px;font-size:14px;">📋</div>
+</td>
+<td style="padding-left:12px;">
+<p style="margin:0;font-size:12px;color:#999;">Consultation Type</p>
+<p style="margin:2px 0 0;font-size:14px;font-weight:700;color:#1B3252;">{{consultation_type}}</p>
+</td>
+</tr>
+</table>
+ 
+                <!-- Duration -->
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="32" valign="top">
+<div style="width:28px;height:28px;background-color:#e8ddd0;border-radius:6px;text-align:center;line-height:28px;font-size:14px;">🕐</div>
+</td>
+<td style="padding-left:12px;">
+<p style="margin:0;font-size:12px;color:#999;">Duration</p>
+<p style="margin:2px 0 0;font-size:14px;font-weight:700;color:#1B3252;">15 minutes</p>
+</td>
+</tr>
+</table>
+</div>
+ 
+              <!-- Payment -->
+<div style="border:2px solid #1B3252;border-radius:12px;padding:24px 28px;margin-bottom:24px;background-color:#ffffff;">
+ 
+                <!-- Title -->
+<h3 style="margin:0 0 8px;font-size:16px;font-weight:700;color:#1B3252;text-align:center;">Complete Your Payment</h3>
+<p style="margin:0 0 20px;font-size:13px;color:#888;text-align:center;">To confirm your appointment, please complete the payment of {{fee}}</p>
+ 
+                <!-- Pay Now (not a link) -->
+<div style="text-align:center;margin-bottom:24px;">
+<div style="display:inline-block;background-color:#C9A87C;color:#1B3252;font-size:15px;font-weight:700;padding:14px 40px;border-radius:8px;">
+                    Pay Now - {{fee}}
+</div>
+</div>
+ 
+                <!-- Divider -->
+<div style="border-top:1px solid #e5e7eb;margin-bottom:24px;"></div>
+ 
+                <!-- Bank Transfer -->
+<p style="margin:0 0 12px;font-size:14px;font-weight:700;color:#1B3252;">Bank Transfer Info</p>
+<table cellpadding="0" cellspacing="0" width="100%" style="background-color:#F5EFE6;border-radius:10px;margin-bottom:24px;">
+<tr>
+<td style="padding:16px 20px;">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="50%" style="padding-bottom:12px;">
+<p style="margin:0;font-size:12px;color:#999;">Company</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;">TeleHealth LLC</p>
+</td>
+<td width="50%" style="padding-bottom:12px;">
+<p style="margin:0;font-size:12px;color:#999;">Routing Number</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;">322271627</p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<p style="margin:0;font-size:12px;color:#999;">Account Number</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;">2906727386</p>
+</td>
+<td width="50%">
+<p style="margin:0;font-size:12px;color:#999;">Address</p>
+<p style="margin:3px 0 0;font-size:14px;font-weight:700;color:#1B3252;">36 Shady Brook Lane,<br/>Lander WY 82520</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+ 
+                <!-- Divider -->
+<div style="border-top:1px solid #e5e7eb;margin-bottom:24px;"></div>
+ 
+                <!-- Zelle QR -->
+<div style="text-align:center;">
+<p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#1B3252;">Pay via Zelle</p>
+<p style="margin:0 0 16px;font-size:13px;color:#888;">Scan the QR code below to send your payment via Zelle</p>
+<img src="{{ zelle_qr_url }}" alt="Zelle QR Code" width="160" height="160" style="border-radius:10px;border:2px solid #e5e7eb;" />
+</div>
+ 
+              </div>
+ 
+              <!-- How to Join -->
+<div style="background-color:#dde8f5;border-radius:12px;padding:24px 28px;margin-bottom:24px;">
+<h3 style="margin:0 0 16px;font-size:15px;font-weight:700;color:#1B3252;">How to Join Your Consultation</h3>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td style="padding:4px 0;font-size:13px;color:#444;">&bull;&nbsp; Complete your payment using the button above</td>
+</tr>
+<tr>
+<td style="padding:4px 0;font-size:13px;color:#444;">&bull;&nbsp; You'll receive a confirmation email with a video call link</td>
+</tr>
+<tr>
+<td style="padding:4px 0;font-size:13px;color:#444;">&bull;&nbsp; Join the call 5 minutes before your scheduled time</td>
+</tr>
+<tr>
+<td style="padding:4px 0;font-size:13px;color:#444;">&bull;&nbsp; Have your medical information and questions ready</td>
+</tr>
+</table>
+</div>
+ 
+              <!-- Footer note -->
+<p style="margin:0 0 8px;font-size:13px;color:#666;line-height:1.6;">
+                If you need to reschedule or have any questions, please contact us at
+<a href="mailto:support@reactides.com" style="color:#3B82F6;text-decoration:none;">support@reactides.com</a>
+</p>
+<p style="margin:0;font-size:13px;color:#666;">Thank you for choosing Reactides for your healthcare needs.</p>
+ 
+            </td>
+</tr>
+ 
+          <!-- Footer -->
+<tr>
+<td style="background-color:#e8edf5;padding:20px 40px;text-align:center;">
+<p style="margin:0;font-size:12px;color:#999;">&copy; <script>document.write(new Date().getFullYear())</script> Reactides. All rights reserved.</p>
+</td>
+</tr>
+ 
+        </table>
+</td>
+</tr>
+</table>
+ 
+</body>
+</html>
