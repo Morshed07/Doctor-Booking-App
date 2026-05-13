@@ -7,7 +7,7 @@ from django.utils.safestring import mark_safe
 
 class Product(BaseModel):
     title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='products/')
+    image = models.ImageField(upload_to='products/', null=True, blank=True)
 
     def __str__(self):
         return self.title

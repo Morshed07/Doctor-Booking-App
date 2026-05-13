@@ -20,14 +20,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-
 urlpatterns = [
+
     path('admin/', admin.site.urls),
 
     path('api/service/', include('apps.service.urls')),
     path('api/doctor/', include('apps.doctor.urls')),
     path('api/consultation-type/', include('apps.consultation_type.urls')),
     path('api/appointment/', include('apps.appointment.urls')),
+    
 ]
 
 
