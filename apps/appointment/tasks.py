@@ -1,7 +1,6 @@
 import logging
 from datetime import datetime
 
-from celery import shared_task
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
@@ -12,8 +11,7 @@ from apps.appointment.models import Appointment
 logger = logging.getLogger(__name__)
 
 
-@shared_task(bind=True, max_retries=3, default_retry_delay=60)
-def send_appointment_confirmation_email(self, appointment_id):
+def send_appointment_confirmation_email(appointment_id):
     """
     Send an appointment confirmation email to the client after booking.
     """
@@ -74,4 +72,3 @@ def send_appointment_confirmation_email(self, appointment_id):
             f"Failed to send appointment confirmation email for "
             f"appointment {appointment_id}: {exc}"
         )
-        raise self.retry(exc=exc)

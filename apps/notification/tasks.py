@@ -1,6 +1,5 @@
 import logging
 
-from celery import shared_task
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
@@ -10,8 +9,8 @@ from apps.notification.models import Alert
 
 logger = logging.getLogger(__name__)
 
-@shared_task(bind=True, max_retries=3, default_retry_delay=60)
-def send_admin_appointment_notification_email(self, appointment_id):
+
+def send_admin_appointment_notification_email(appointment_id):
     try:
         alert_emails = list(Alert.objects.values_list('admin_email', flat=True))
         if not alert_emails:
@@ -73,4 +72,3 @@ def send_admin_appointment_notification_email(self, appointment_id):
             f"Failed to send admin notification email: {exc}",
             exc_info=True
         )
-        raise self.retry(exc=exc)

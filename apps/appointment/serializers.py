@@ -69,10 +69,10 @@ class AppointmentSerializer(serializers.ModelSerializer):
         
         # Send confirmation email to patient
         if appointment.email:
-            send_appointment_confirmation_email.delay(appointment.id)
+            send_appointment_confirmation_email(appointment.id)
         
         # Send admin notification email
-        send_admin_appointment_notification_email.delay(appointment.id)
+        send_admin_appointment_notification_email(appointment.id)
         
         return appointment
        
